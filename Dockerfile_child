@@ -1,0 +1,3 @@
+FROM kmcintosh/docker_example_node_base:latest
+
+CMD ["node", "main.js"]

@@ -1,0 +1,10 @@
+FROM node:12-alpine as base
+
+WORKDIR /usr/src/app
+
+EXPOSE 80
+
+COPY main.js .
+COPY package*.json ./
+
+RUN npm install
