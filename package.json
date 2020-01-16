@@ -1,0 +1,17 @@
+{
+  "name": "hello_world_node",
+  "version": "1.0.0",
+  "description": "Hello World express app",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "<Insert Name Here>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "repository": {
+    "directory": "."
+  }
+}
