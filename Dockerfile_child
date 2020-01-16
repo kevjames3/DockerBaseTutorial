@@ -1,3 +1,4 @@
-FROM kmcintosh/docker_example_node_base:latest
+ARG BASEIMAGE
+FROM ${BASEIMAGE}
 
 CMD ["node", "main.js"]
