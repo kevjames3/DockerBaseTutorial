@@ -1,5 +1,4 @@
 package_sha=`git log -n 1 --pretty=format:%H -- package.json | awk '{ print $1 }'`
-repo_sha=`git log -n 1 --pretty=format:%H | awk '{ print $1 }'`
 isid=`whoami`
 base=${isid}/docker_example_node_base
 child=${isid}/docker_example_child
@@ -19,7 +18,7 @@ fi
 echo "-----------------"
 
 echo "Building child image"
-echo "docker build -t ${child}:${repo_sha} -f ./Dockerfile_child . --no-cache=true --build-arg BASEIMAGE=${base_image}"
+echo "docker build -t ${child}:latest -f ./Dockerfile_child . --no-cache=true --build-arg BASEIMAGE=${base_image}"
 # Now build the child file
-docker build -t ${child}:${repo_sha} -f ./Dockerfile_child . --no-cache=true --build-arg BASEIMAGE=${base_image}
+docker build -t ${child}:latest -f ./Dockerfile_child . --no-cache=true --build-arg BASEIMAGE=${base_image}
 echo "-----------------"
